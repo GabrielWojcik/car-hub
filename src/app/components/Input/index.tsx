@@ -13,11 +13,11 @@ const Input: React.FC<InputProps> = ({
     hasError,
 }) => {
     const borderRadiusValue = borderRadius ? `${borderRadius}px` : '8px';
-    console.log('icon', icon.src)
+
     const inputStyle: React.CSSProperties = {
         width: '100%',
         padding: '8px 8px 8px 40px', 
-        border: `1px solid ${hasError ? 'red' : '#ccc'}`, // Muda a borda para vermelha se houver erro
+        border: `1px solid ${hasError ? 'red' : '#ccc'}`, 
         borderRadius: borderRadiusValue,
         backgroundColor: backgroundColor || '#fff',
         position: 'relative',
@@ -26,23 +26,14 @@ const Input: React.FC<InputProps> = ({
 
     return (
         <div>
-            <label style={{ display: 'block', marginBottom: '4px' }}>{label}</label>
+            <label style={{ display: 'block', marginBottom: '4px', color: "#000000" }}>{label}</label>
             <div style={{ position: 'relative' }}>
                 {icon && (
                     <Image
-                        src={icon.src}
+                        src={icon}
                         alt="Input icon"
                         width={20}
                         height={20}
-                        // style={{
-                        //     width: '20px',
-                        //     height: '20px',
-                        //     position: 'absolute',
-                        //     left: '10px',
-                        //     top: '50%',
-                        //     transform: 'translateY(-50%)',
-                        //     zIndex: '2000'
-                        // }}
                     />
                 )}
                 <input
@@ -52,6 +43,11 @@ const Input: React.FC<InputProps> = ({
                     onChange={onChange}
                     style={inputStyle}
                 />
+                {
+                    hasError && (
+                        <p className='text-red-600'>Campo obrigatório</p>
+                    )
+                }
             </div>
         </div>
     );
