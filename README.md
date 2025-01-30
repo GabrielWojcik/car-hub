@@ -10,6 +10,10 @@ Este projeto tem como objetivo oferecer uma plataforma online onde os usuários 
 - **Zod**: Para validação de esquemas, assegurando a integridade dos dados dos formulários.
 - **React Hook Form**: Para gerenciar o estado e a validação dos formulários de forma eficiente.
 
+## Protótipo
+![prototipo-main](https://github.com/user-attachments/assets/431cd239-865b-4327-9d3d-71a6a1ac9d85)
+
+
 ## Começando
 
 Primeiro, clone o repositório:
