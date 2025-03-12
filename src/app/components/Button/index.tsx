@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
         display: 'flex',
         alignItems: 'center', 
         width: '100%',
-        justifyContent: 'center'
+        justifyContent: 'center',
     };
 
     return (

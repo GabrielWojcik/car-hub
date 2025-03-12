@@ -7,4 +7,5 @@ export interface InputProps {
     borderRadius?: number;
     register?: any; 
     hasError?: boolean;
+    password?: boolean;
 }

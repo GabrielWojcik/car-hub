@@ -6,4 +6,5 @@ export interface ButtonProps {
     borderRadius?: number; 
     icon?: string;
     type?: 'button' | 'submit' | 'reset'; 
+    password?: boolean;
 }
